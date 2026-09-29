@@ -1,0 +1,11 @@
+model,effort,family,standalone_correct,standalone_attempts,control_correct,control_attempts,survive,survival_attempts,survival_assessable,proxy
+gpt-5.5,high,banded_meter_billing,16,18,16,18,12,18,18,false
+gpt-5.5,high,fee_ledger_dropzero,18,18,16,18,13,18,18,true
+gpt-5.5,high,spent_tracking_gateway,17,18,17,18,4,6,6,false
+gemini/gemini-3.1-pro-preview,high,banded_meter_billing,15,18,13,18,15,19,17,false
+gemini/gemini-3.1-pro-preview,high,fee_ledger_dropzero,16,18,10,18,8,18,12,true
+gemini/gemini-3.1-pro-preview,high,spent_tracking_gateway,17,18,17,18,4,6,6,false
+deepseek/deepseek-v4-pro,default,banded_meter_billing,15,18,,,16,18,18,false
+deepseek/deepseek-v4-pro,default,fee_ledger_dropzero,8,18,,,6,18,18,true
+deepseek/deepseek-v4-pro,default,spent_tracking_gateway,14,18,,,17,18,18,false
+deepseek/deepseek-v4-pro,default,fee_ledger_dropzero_capped_era,5,18,,,,,,true

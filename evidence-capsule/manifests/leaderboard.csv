@@ -1,0 +1,15 @@
+model,effort,config,rank,presentation_class,ch6,ch6_qual,capability,capability_qual,min_attempts,availability_dominated,route_comparison_note,provisional,frontier_eligible,cost_per_attempt_l100,cost_per_success_pooled,cost_per_success_macro
+gpt-6-astra,high,gpt-6-astra/high,1,ranked,400.000,≥,400.000,≥,6,0,"",0,1,0.3115,0.3115,0.3115
+anthropic/claude-opus-5-5,high,anthropic/opus-5-5/high,2,ranked,317.490,≥,400.000,≥,6,0,"",0,1,0.1777,0.1827,0.1829
+gpt-5.5,high,gpt-5.5/high,3,ranked,146.509,,258.909,,6,0,"",0,1,0.3657,0.3816,0.3814
+deepseek/deepseek-flash,default,deepseek/deepseek-flash/default,4,ranked,138.391,,301.423,,6,0,"",0,1,0.0335,0.0355,0.0355
+anthropic/claude-opus-5,high,anthropic/opus-5/high,5,ranked,100.000,≤,400.000,≥,6,0,"",0,0,0.2817,0.3073,0.3073
+gpt-5.6-sol,high,gpt-5.6-sol/high,6,ranked,94.250,,196.662,,6,0,"",0,0,0.2711,0.3366,0.3548
+gemini/gemini-3.7-flash,medium,gemini/gemini-3.7-flash/medium,7,ranked,91.652,,147.428,,6,0,"",0,0,0.0698,0.0897,0.0900
+deepseek/deepseek-v4-pro,default,deepseek/deepseek-v4-pro/default,8,ranked,81.462,,258.349,,6,0,"",0,0,0.1263,0.1491,0.1491
+gpt-6-sol,high,gpt-6-sol/high,9,ranked,79.373,,144.603,,6,0,"",0,0,0.0637,0.1020,0.1210
+deepseek/deepseek-v4-flash,default,deepseek/deepseek-v4-flash/default,10,ranked,77.136,≤,214.476,,6,0,"",0,0,0.0618,0.0684,0.0685
+gpt-5.6-luna,high,gpt-5.6-luna/high,11,ranked,50.000,≤,50.000,≤,6,0,"",0,0,0.0184,0.0944,0.1957
+gpt-5.6-terra,high,gpt-5.6-terra/high,12,ranked,50.000,≤,56.125,≤,6,0,"",0,0,0.0968,0.4019,0.3921
+gpt-6-luna,high,gpt-6-luna/high,13,ranked,50.000,≤,50.000,≤,6,0,"",0,0,0.0071,0.1910,
+gemini/gemini-3.7-flash,high,gemini/gemini-3.7-flash/high,,bound,99.980,,242.949,,1,0,"",0,0,0.1679,0.1889,0.1910

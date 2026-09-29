@@ -1,0 +1,14 @@
+config,rank_eligible,ch6_isotonic,qual_isotonic,ch6_first_bracket,qual_first_bracket,ch6_last_straddle,qual_last_straddle,shift_first_bracket_events,shift_first_bracket_qual,shift_last_straddle_events,shift_last_straddle_qual,max_abs_shift_events,max_shift_qual,max_shift_rule,order_changed_vs_isotonic
+gpt-6-astra/high,1,400.000,≥,400.000,≥,400.000,≥,0,,0,,0,,,first_bracket;last_straddle
+anthropic/opus-5-5/high,1,317.490,≥,317.490,≥,317.490,≥,0,,0,,0,,,first_bracket;last_straddle
+gpt-5.5/high,1,146.509,,149.730,,149.730,,3,,3,,3,,first_bracket;last_straddle,first_bracket;last_straddle
+deepseek/deepseek-flash/default,1,138.391,,141.542,,141.542,,4,,4,,4,,first_bracket;last_straddle,first_bracket;last_straddle
+anthropic/opus-5/high,1,100.000,≤,154.272,,154.272,,54,≥,54,≥,54,≥,first_bracket;last_straddle,first_bracket;last_straddle
+gpt-5.6-sol/high,1,94.250,,97.857,,97.857,,4,,4,,4,,first_bracket;last_straddle,first_bracket;last_straddle
+gemini/gemini-3.7-flash/medium,1,91.652,,91.652,,91.652,,0,,0,,0,,,first_bracket;last_straddle
+deepseek/deepseek-v4-pro/default,1,81.462,,77.485,,125.698,,4,,45,,45,,last_straddle,first_bracket;last_straddle
+gpt-6-sol/high,1,79.373,,79.373,,79.373,,0,,0,,0,,,first_bracket;last_straddle
+deepseek/deepseek-v4-flash/default,1,77.136,≤,109.087,,109.087,,32,≥,32,≥,32,≥,first_bracket;last_straddle,first_bracket;last_straddle
+gpt-5.6-luna/high,1,50.000,≤,50.000,≤,50.000,≤,0,,0,,0,,,first_bracket;last_straddle
+gpt-5.6-terra/high,1,50.000,≤,50.000,≤,50.000,≤,0,,0,,0,,,first_bracket;last_straddle
+gpt-6-luna/high,1,50.000,≤,50.000,≤,50.000,≤,0,,0,,0,,,first_bracket;last_straddle

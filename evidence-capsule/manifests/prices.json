@@ -1,0 +1,72 @@
+{
+  "_note": "USD per 1M tokens, (input, output) — UNDISCOUNTED LIST PRICES from the vendored benchkit registry (scripts/research/pricing.py, benchkit@0.1.5) at capsule freeze. House reporting rule (2026-07-11): published costs use list prices; flex/batch/off-peak discounts (up to 50%) reduce collection cost only, never reported cost. Rows are priced by the answering model; the Opus 5 batch rows persist a bare answering_model that borrows the provider prefix from the requested model id. Corrected 2026-09-07: anthropic/claude-opus-5 output 10 -> 25 (the 10 was the 1h cache-write column) and gpt-5.6-terra 0.5/3.0 -> 2.0/12.0 (Luna's -80% cut had been applied to Terra); both re-verified against the live provider pricing pages 2026-09-07.",
+  "verified": {
+    "gpt-5.5": "2026-07-11",
+    "gpt-5.6-sol": "2026-07-11",
+    "gpt-5.6-terra": "2026-09-07",
+    "gpt-5.6-luna": "2026-08-15",
+    "anthropic/claude-opus-5": "2026-09-07",
+    "gemini/gemini-3.7-flash": "2026-08-15",
+    "deepseek/deepseek-v4-pro": "2026-08-17",
+    "deepseek/deepseek-v4-flash": "2026-08-17",
+    "gpt-6-luna": "2026-09-24",
+    "gpt-6-sol": "2026-09-24",
+    "deepseek/deepseek-flash": "2026-09-25",
+    "gpt-6-astra": "2026-09-25",
+    "anthropic/claude-opus-5-5": "2026-09-25"
+  },
+  "prices": {
+    "gpt-5.5": [
+      5.0,
+      30.0
+    ],
+    "gpt-5.6-sol": [
+      5.0,
+      30.0
+    ],
+    "gpt-5.6-terra": [
+      2.0,
+      12.0
+    ],
+    "gpt-5.6-luna": [
+      0.2,
+      1.2
+    ],
+    "anthropic/claude-opus-5": [
+      5.0,
+      25.0
+    ],
+    "gemini/gemini-3.7-flash": [
+      0.75,
+      3.75
+    ],
+    "deepseek/deepseek-v4-pro": [
+      1.32,
+      3.96
+    ],
+    "deepseek/deepseek-v4-flash": [
+      0.44,
+      1.32
+    ],
+    "gpt-6-luna": [
+      0.1,
+      0.5
+    ],
+    "gpt-6-sol": [
+      2.0,
+      10.0
+    ],
+    "deepseek/deepseek-flash": [
+      0.3,
+      1.2
+    ],
+    "gpt-6-astra": [
+      10.0,
+      50.0
+    ],
+    "anthropic/claude-opus-5-5": [
+      4.0,
+      20.0
+    ]
+  }
+}

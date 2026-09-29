@@ -1,0 +1,12 @@
+{
+  "title": "ClerkBench v1: data, scorer and evidence capsule",
+  "upload_type": "dataset",
+  "version": "1.0.0",
+  "creators": [
+    {"name": "Allcock, Adam", "affiliation": "Independent researcher"}
+  ],
+  "description": "<p>Data and code release for <em>ClerkBench: Measuring the Consistency Horizon of Language Models on Long Deterministic Workloads</em> (Allcock, 2026). ClerkBench measures how long a chain of simple, fully specified clerical computation (billing, payroll, ledger replay, gateway spend tracking) a language model can execute byte-perfectly on every one of six attempts, with no tools.</p><p>The release contains the byte-exact scorer, every scored task instance, all 5,313 raw model attempts behind the fourteen-configuration board, the aggregate data behind every published number, the pre-registration documents, and <code>evidence-capsule/rebuild.py</code>, which re-scores every attempt with the public scorer and reproduces the board exactly (Python standard library only, no network).</p>",
+  "license": "cc-by-4.0",
+  "notes": "Code (scorers/, evidence-capsule/scorers/, evidence-capsule/rebuild.py) is licensed under the Apache License 2.0; data and documentation under CC BY 4.0. See LICENSE and LICENSE-DATA-DOCS.md.",
+  "keywords": ["benchmark", "large language models", "reliability", "consistency horizon", "evaluation"]
+}

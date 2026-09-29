@@ -1,0 +1,34 @@
+cff-version: 1.2.0
+message: "If you use this release, please cite the paper and this archive."
+title: "ClerkBench v1: data, scorer and evidence capsule"
+type: dataset
+version: 1.0.0
+date-released: 2026-09-29
+authors:
+  - family-names: Allcock
+    given-names: Adam
+    affiliation: Independent researcher
+license:
+  - CC-BY-4.0
+  - Apache-2.0
+repository-code: "https://github.com/adamallcock/clerkbench"
+abstract: >-
+  Data and code release for ClerkBench, a benchmark that measures how long a
+  chain of simple, fully specified clerical computation a language model can
+  execute byte-perfectly. Includes the byte-exact scorer, every scored task
+  instance, every raw model attempt behind the fourteen-configuration board,
+  the aggregate data behind every published number, and a one-command rebuild
+  that re-scores every attempt and reproduces the board.
+keywords:
+  - benchmark
+  - large language models
+  - reliability
+  - consistency horizon
+  - evaluation
+preferred-citation:
+  type: article
+  title: "ClerkBench: Measuring the Consistency Horizon of Language Models on Long Deterministic Workloads"
+  authors:
+    - family-names: Allcock
+      given-names: Adam
+  year: 2026

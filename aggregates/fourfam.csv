@@ -1,0 +1,14 @@
+model,effort,config,ch6_4fam,qual
+gpt-6-astra,high,gpt-6-astra/high,400.000,≥
+anthropic/claude-opus-5-5,high,anthropic/opus-5-5/high,166.912,~
+gpt-5.5,high,gpt-5.5/high,156.854,
+deepseek/deepseek-flash,default,deepseek/deepseek-flash/default,115.775,
+anthropic/claude-opus-5,high,anthropic/opus-5/high,114.014,≤
+gpt-5.6-sol,high,gpt-5.6-sol/high,112.182,
+gemini/gemini-3.7-flash,medium,gemini/gemini-3.7-flash/medium,99.872,
+deepseek/deepseek-v4-pro,default,deepseek/deepseek-v4-pro/default,98.458,
+gpt-6-sol,high,gpt-6-sol/high,84.125,≤
+deepseek/deepseek-v4-flash,default,deepseek/deepseek-v4-flash/default,73.612,≤
+gpt-5.6-luna,high,gpt-5.6-luna/high,42.045,≤
+gpt-5.6-terra,high,gpt-5.6-terra/high,42.045,≤
+gpt-6-luna,high,gpt-6-luna/high,42.045,≤

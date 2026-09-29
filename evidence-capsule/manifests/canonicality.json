@@ -1,0 +1,614 @@
+{
+  "_note": "The canonical v1 collection, exported as data. Every raw row behind the published v1 boards lives in the eight run dirs below — the campaign dirs were purged upstream (DeepSeek checkpoint change 2026-08-15; OpenAI-roster fresh collection on the frozen v1 tasks), so the capsule needs no supersede or adjudication machinery: rebuild.py loads every attempts/ file, applies the measurement doctrine (drop transport-error and budget-capped rows), dedupes on (model, effort, task_id, attempt_index), and rebuilds the boards. Constants mirror scripts/research/build_report_tables.py at capsule freeze.",
+  "campaign": "clerkbench-v1, collected 2026-08-15..2026-08-18 UTC (DS-Flash founding content fix re-collected 2026-08-18 UTC / 2026-08-17 US Eastern)",
+  "_date_convention": "Every date in this file, in the attempt rows (started_at / completed_at, ISO 8601 with an explicit +00:00 offset) and in release/clerkbench-v1/README.md is a UTC date. The campaign's first attempt started 2026-08-15T15:52Z and its last completed 2026-08-18T02:30Z. Run-directory names (*-v1-20260815, *-v1-20260816) carry the LOCAL date a collection was started and are labels, not windows; documents written in local time (git commit dates, some research logs) say 08-17 where this file says 08-18.",
+  "founding_families": [
+    "banded_meter_billing",
+    "fee_ledger_dropzero"
+  ],
+  "families": [
+    "banded_meter_billing",
+    "fee_ledger_dropzero",
+    "payroll_overtime_ledger",
+    "spent_tracking_gateway"
+  ],
+  "sizes": [
+    50,
+    100,
+    200,
+    400,
+    800
+  ],
+  "width_confounded_size": 800,
+  "calibration_rungs_not_in_tables": [
+    25
+  ],
+  "config_order_hint": [
+    "none",
+    "low",
+    "medium",
+    "high",
+    "high+fallback",
+    "xhigh"
+  ],
+  "v1_roster": [
+    [
+      "gpt-5.5",
+      "high"
+    ],
+    [
+      "gpt-5.6-sol",
+      "high"
+    ],
+    [
+      "gpt-5.6-terra",
+      "high"
+    ],
+    [
+      "gpt-5.6-luna",
+      "high"
+    ],
+    [
+      "anthropic/claude-opus-5",
+      "high"
+    ],
+    [
+      "gemini/gemini-3.7-flash",
+      "high"
+    ],
+    [
+      "gemini/gemini-3.7-flash",
+      "medium"
+    ],
+    [
+      "deepseek/deepseek-v4-pro",
+      "default"
+    ],
+    [
+      "deepseek/deepseek-v4-flash",
+      "default"
+    ],
+    [
+      "gpt-6-luna",
+      "high"
+    ],
+    [
+      "gpt-6-sol",
+      "high"
+    ],
+    [
+      "deepseek/deepseek-flash",
+      "default"
+    ],
+    [
+      "gpt-6-astra",
+      "high"
+    ],
+    [
+      "anthropic/claude-opus-5-5",
+      "high"
+    ]
+  ],
+  "provisional_founding_attempt_threshold": 60,
+  "canonical_run_dirs": [
+    "terra-v1-20260815",
+    "luna-v1-20260815",
+    "opus5-v1-20260815",
+    "gemini37flash-v1-20260815",
+    "gpt55-v1-20260816",
+    "sol-v1-20260816",
+    "deepseek-v4-pro-v1-20260815",
+    "deepseek-v4-flash-v1-20260815",
+    "gpt6luna-v1-20260924",
+    "gpt55-v1-ch6topup-20260924",
+    "sol-v1-ch6topup-20260924",
+    "opus5-v1-ch6topup-20260924",
+    "opus5-v1-ch6topup-20260925",
+    "gpt6sol-v1-20260925",
+    "dspro-v1-ch6topup-20260925",
+    "dsflash41-v1-20260925",
+    "gpt6astra-v1-20260925",
+    "opus55-v1-20260925",
+    "opus5-v1-shortrung-20260925",
+    "gemini37flash-v1-ch6topup-20260925"
+  ],
+  "known_divergent_task_manifests": [
+    "founding_3inst",
+    "founding_6inst",
+    "dsflash_content_fix"
+  ],
+  "known_divergent_task_id_count": 18,
+  "_divergence_note": "18 founding task ids (meter/dropzero, L100-L400, instances 000001-000003) carry different content in founding_3inst vs founding_6inst (RNG drift caught 2026-08-16/17). DATA-level fix, 2026-08-18 UTC (2026-08-18T00:13-02:30Z; the evening of 2026-08-17 US Eastern): those 18 instances were re-collected for DeepSeek-V4-Flash on the canonical founding_3inst content (dsflash_content_fix, 108 attempts, all completed; one in-collection re-run cleared a stochastic budget cap before the log was finalized), and the 108 superseded 6inst-content rows were retired from founding_6inst-deepseek_deepseek-v4-flash-default.jsonl — the pre-trim log is preserved in git (commit 02e4810). Every config's instances 000001-000003 therefore answered 3inst-equivalent content and V4-Flash is ranked on the boards. The divergence persists only as a property of the two task FILES; every row is scored against the manifest its run was served from (recovered from the attempts filename), and rebuild.py verifies dsflash_content_fix is byte-identical to founding_3inst on every id it carries.",
+  "attempts_files": {
+    "deepseek-v4-flash-v1-20260815__dsflash_content_fix-deepseek_deepseek-v4-flash-default.jsonl": {
+      "source_run_dir": "deepseek-v4-flash-v1-20260815",
+      "source_file": "results/relbench/pilot/runs/deepseek-v4-flash-v1-20260815/dsflash_content_fix-deepseek_deepseek-v4-flash-default.jsonl",
+      "task_manifest": "dsflash_content_fix",
+      "rows": 108,
+      "sha256": "232ff1ca30a209de05623223e34a4adfa6c5b15c9f40b141453d146cd59214b0"
+    },
+    "deepseek-v4-flash-v1-20260815__founding_6inst-deepseek_deepseek-v4-flash-default.jsonl": {
+      "source_run_dir": "deepseek-v4-flash-v1-20260815",
+      "source_file": "results/relbench/pilot/runs/deepseek-v4-flash-v1-20260815/founding_6inst-deepseek_deepseek-v4-flash-default.jsonl",
+      "task_manifest": "founding_6inst",
+      "rows": 180,
+      "sha256": "95eb517b6cdc50f88d05b9e9f97bd993269714a75f703d8731aef377f0bf43ab"
+    },
+    "deepseek-v4-flash-v1-20260815__newfam_3inst-deepseek_deepseek-v4-flash-default.jsonl": {
+      "source_run_dir": "deepseek-v4-flash-v1-20260815",
+      "source_file": "results/relbench/pilot/runs/deepseek-v4-flash-v1-20260815/newfam_3inst-deepseek_deepseek-v4-flash-default.jsonl",
+      "task_manifest": "newfam_3inst",
+      "rows": 162,
+      "sha256": "7e7edce0428ea0262684a33a72883c1e78dd15093f6f92ee311a30db80ed9a67"
+    },
+    "deepseek-v4-pro-v1-20260815__dspro_topup-deepseek_deepseek-v4-pro-default.jsonl": {
+      "source_run_dir": "deepseek-v4-pro-v1-20260815",
+      "source_file": "results/relbench/pilot/runs/deepseek-v4-pro-v1-20260815/dspro_topup-deepseek_deepseek-v4-pro-default.jsonl",
+      "task_manifest": "dspro_topup",
+      "rows": 72,
+      "sha256": "b3b61f6ff85bc65943e41214464aedc03e2a533910d46edb7ddfde66588db660"
+    },
+    "deepseek-v4-pro-v1-20260815__founding_3inst-deepseek_deepseek-v4-pro-default.jsonl": {
+      "source_run_dir": "deepseek-v4-pro-v1-20260815",
+      "source_file": "results/relbench/pilot/runs/deepseek-v4-pro-v1-20260815/founding_3inst-deepseek_deepseek-v4-pro-default.jsonl",
+      "task_manifest": "founding_3inst",
+      "rows": 144,
+      "sha256": "ee783862d276b534eccc51b8effd98a01d5d649a58da977bbe057de99d757992"
+    },
+    "deepseek-v4-pro-v1-20260815__newfam_3inst-deepseek_deepseek-v4-pro-default.jsonl": {
+      "source_run_dir": "deepseek-v4-pro-v1-20260815",
+      "source_file": "results/relbench/pilot/runs/deepseek-v4-pro-v1-20260815/newfam_3inst-deepseek_deepseek-v4-pro-default.jsonl",
+      "task_manifest": "newfam_3inst",
+      "rows": 162,
+      "sha256": "9d956c27648c319521c777d4dba27bf3ecf2e5ee12b1e8f87373508c7c12df7e"
+    },
+    "gemini37flash-v1-20260815__founding_3inst-gemini_gemini-3-7-flash-high.jsonl": {
+      "source_run_dir": "gemini37flash-v1-20260815",
+      "source_file": "results/relbench/pilot/runs/gemini37flash-v1-20260815/founding_3inst-gemini_gemini-3-7-flash-high.jsonl",
+      "task_manifest": "founding_3inst",
+      "rows": 144,
+      "sha256": "42a45c72ec72c439a064cfc16b60f7eb395f16273b873d6faa6e8ed0241d70d8"
+    },
+    "gemini37flash-v1-20260815__founding_3inst-gemini_gemini-3-7-flash-medium.jsonl": {
+      "source_run_dir": "gemini37flash-v1-20260815",
+      "source_file": "results/relbench/pilot/runs/gemini37flash-v1-20260815/founding_3inst-gemini_gemini-3-7-flash-medium.jsonl",
+      "task_manifest": "founding_3inst",
+      "rows": 146,
+      "sha256": "a10adfb0de34d4f6a5bc65cc245c3e587e4a574ee640d0426ffcbb26d8a1cacd"
+    },
+    "gemini37flash-v1-20260815__geminimed_topup-gemini_gemini-3-7-flash-medium.jsonl": {
+      "source_run_dir": "gemini37flash-v1-20260815",
+      "source_file": "results/relbench/pilot/runs/gemini37flash-v1-20260815/geminimed_topup-gemini_gemini-3-7-flash-medium.jsonl",
+      "task_manifest": "geminimed_topup",
+      "rows": 72,
+      "sha256": "b58acdc30150c078178e85487fcdba829bbc7716889544ae7cc09429933abf09"
+    },
+    "gemini37flash-v1-20260815__newfam_3inst-gemini_gemini-3-7-flash-high.jsonl": {
+      "source_run_dir": "gemini37flash-v1-20260815",
+      "source_file": "results/relbench/pilot/runs/gemini37flash-v1-20260815/newfam_3inst-gemini_gemini-3-7-flash-high.jsonl",
+      "task_manifest": "newfam_3inst",
+      "rows": 162,
+      "sha256": "0e235959d227b7319616447029a2148f95b53046bc08fc29a951e0ff8cc33c70"
+    },
+    "gemini37flash-v1-20260815__newfam_3inst-gemini_gemini-3-7-flash-medium.jsonl": {
+      "source_run_dir": "gemini37flash-v1-20260815",
+      "source_file": "results/relbench/pilot/runs/gemini37flash-v1-20260815/newfam_3inst-gemini_gemini-3-7-flash-medium.jsonl",
+      "task_manifest": "newfam_3inst",
+      "rows": 162,
+      "sha256": "8801b77b17f4946cd03cbb44f478b4d529896fa18988a2d3cb5935ec5ecadcf8"
+    },
+    "gpt55-v1-20260816__founding_3inst-gpt-5-5-high.jsonl": {
+      "source_run_dir": "gpt55-v1-20260816",
+      "source_file": "results/relbench/pilot/runs/gpt55-v1-20260816/founding_3inst-gpt-5-5-high.jsonl",
+      "task_manifest": "founding_3inst",
+      "rows": 144,
+      "sha256": "496bcf76280bb20b2e66d46c7292a59f58cdcc727eb7010227555f3f436459b3"
+    },
+    "gpt55-v1-20260816__gpt55_topup-gpt-5-5-high.jsonl": {
+      "source_run_dir": "gpt55-v1-20260816",
+      "source_file": "results/relbench/pilot/runs/gpt55-v1-20260816/gpt55_topup-gpt-5-5-high.jsonl",
+      "task_manifest": "gpt55_topup",
+      "rows": 72,
+      "sha256": "232807d93078216c1b26acf8df2155cf3ddab4d7208be3d60ca3c8c92005e38c"
+    },
+    "gpt55-v1-20260816__newfam_3inst-gpt-5-5-high.jsonl": {
+      "source_run_dir": "gpt55-v1-20260816",
+      "source_file": "results/relbench/pilot/runs/gpt55-v1-20260816/newfam_3inst-gpt-5-5-high.jsonl",
+      "task_manifest": "newfam_3inst",
+      "rows": 162,
+      "sha256": "7d07eefb25ae9f7fdcee62b0f47d6aa0fefd221378cb0980e7649875873e2a5b"
+    },
+    "luna-v1-20260815__founding_3inst-gpt-5-6-luna-high.jsonl": {
+      "source_run_dir": "luna-v1-20260815",
+      "source_file": "results/relbench/pilot/runs/luna-v1-20260815/founding_3inst-gpt-5-6-luna-high.jsonl",
+      "task_manifest": "founding_3inst",
+      "rows": 144,
+      "sha256": "0063a501b65ab679cdfdd2253413723fc76763fccc99b5941e832d4be6146a03"
+    },
+    "luna-v1-20260815__newfam_3inst-gpt-5-6-luna-high.jsonl": {
+      "source_run_dir": "luna-v1-20260815",
+      "source_file": "results/relbench/pilot/runs/luna-v1-20260815/newfam_3inst-gpt-5-6-luna-high.jsonl",
+      "task_manifest": "newfam_3inst",
+      "rows": 162,
+      "sha256": "6a6104640357e8314a21ec8fe5a3d64d520b5eb4eb344cbaf7f82621a6c8e3e9"
+    },
+    "opus5-v1-20260815__founding_3inst-anthropic_claude-opus-5-high.jsonl": {
+      "source_run_dir": "opus5-v1-20260815",
+      "source_file": "results/relbench/pilot/runs/opus5-v1-20260815/founding_3inst-anthropic_claude-opus-5-high.jsonl",
+      "task_manifest": "founding_3inst",
+      "rows": 144,
+      "sha256": "7f378f569c1a6e5617704ba90a7bd32323bc3c7e9fdc7f2e176400e149f7b294"
+    },
+    "opus5-v1-20260815__newfam_3inst-anthropic_claude-opus-5-high.jsonl": {
+      "source_run_dir": "opus5-v1-20260815",
+      "source_file": "results/relbench/pilot/runs/opus5-v1-20260815/newfam_3inst-anthropic_claude-opus-5-high.jsonl",
+      "task_manifest": "newfam_3inst",
+      "rows": 162,
+      "sha256": "0ed46c39735eacabfca514c96f6b994c48094fb45d1c2d9e3680d82bba956506"
+    },
+    "sol-v1-20260816__founding_3inst-gpt-5-6-sol-high.jsonl": {
+      "source_run_dir": "sol-v1-20260816",
+      "source_file": "results/relbench/pilot/runs/sol-v1-20260816/founding_3inst-gpt-5-6-sol-high.jsonl",
+      "task_manifest": "founding_3inst",
+      "rows": 144,
+      "sha256": "9b3236ecc21fb4ceec362ad237e6628d530cde6c75a36f0c04c4034c6303ae85"
+    },
+    "sol-v1-20260816__newfam_3inst-gpt-5-6-sol-high.jsonl": {
+      "source_run_dir": "sol-v1-20260816",
+      "source_file": "results/relbench/pilot/runs/sol-v1-20260816/newfam_3inst-gpt-5-6-sol-high.jsonl",
+      "task_manifest": "newfam_3inst",
+      "rows": 162,
+      "sha256": "3474abfec34d4ba74e5e4e492f38095184118d6f5f173536dfeaf7b4413c19e2"
+    },
+    "sol-v1-20260816__sol_topup-gpt-5-6-sol-high.jsonl": {
+      "source_run_dir": "sol-v1-20260816",
+      "source_file": "results/relbench/pilot/runs/sol-v1-20260816/sol_topup-gpt-5-6-sol-high.jsonl",
+      "task_manifest": "sol_topup",
+      "rows": 72,
+      "sha256": "851c822d3fda718b15397feee73b2cd422b8d27fdb20cb3563b353ea19c96c7d"
+    },
+    "terra-v1-20260815__founding_3inst-gpt-5-6-terra-high.jsonl": {
+      "source_run_dir": "terra-v1-20260815",
+      "source_file": "results/relbench/pilot/runs/terra-v1-20260815/founding_3inst-gpt-5-6-terra-high.jsonl",
+      "task_manifest": "founding_3inst",
+      "rows": 144,
+      "sha256": "87a718f2ade7201500358082473cdbda6142270629f4d18385da649f2a1fff8b"
+    },
+    "terra-v1-20260815__newfam_3inst-gpt-5-6-terra-high.jsonl": {
+      "source_run_dir": "terra-v1-20260815",
+      "source_file": "results/relbench/pilot/runs/terra-v1-20260815/newfam_3inst-gpt-5-6-terra-high.jsonl",
+      "task_manifest": "newfam_3inst",
+      "rows": 162,
+      "sha256": "237e41ebb611cb0ecc4c2e82ead6c19f4868416c93b2f7235a910eb995a65d72"
+    },
+    "terra-v1-20260815__terra_topup-gpt-5-6-terra-high.jsonl": {
+      "source_run_dir": "terra-v1-20260815",
+      "source_file": "results/relbench/pilot/runs/terra-v1-20260815/terra_topup-gpt-5-6-terra-high.jsonl",
+      "task_manifest": "terra_topup",
+      "rows": 36,
+      "sha256": "0fa41df9deb05ec7ef38deb3d52de27d7d289342d16976360cbf01f28a626daf"
+    },
+    "gpt6luna-v1-20260924__founding_3inst-gpt-6-luna-high.jsonl": {
+      "source_run_dir": "gpt6luna-v1-20260924",
+      "source_file": "results/relbench/pilot/runs/gpt6luna-v1-20260924/founding_3inst-gpt-6-luna-high.jsonl",
+      "task_manifest": "founding_3inst",
+      "rows": 145,
+      "sha256": "765831099ef624fe33f3216aeda5734f96fd827b02661fed0a2217d0eab70a2c"
+    },
+    "gpt6luna-v1-20260924__gpt6luna_topup-gpt-6-luna-high.jsonl": {
+      "source_run_dir": "gpt6luna-v1-20260924",
+      "source_file": "results/relbench/pilot/runs/gpt6luna-v1-20260924/gpt6luna_topup-gpt-6-luna-high.jsonl",
+      "task_manifest": "gpt6luna_topup",
+      "rows": 36,
+      "sha256": "ed08645e8645a4ec656454955c93fba496627538cda594cf6d05bf8be5c76ec7"
+    },
+    "gpt6luna-v1-20260924__newfam_3inst-gpt-6-luna-high.jsonl": {
+      "source_run_dir": "gpt6luna-v1-20260924",
+      "source_file": "results/relbench/pilot/runs/gpt6luna-v1-20260924/newfam_3inst-gpt-6-luna-high.jsonl",
+      "task_manifest": "newfam_3inst",
+      "rows": 162,
+      "sha256": "452cc90cf3eb0d823f6dcc8cdfdb4e0c69197d748607ffc9e9c7af1286bd91f8"
+    },
+    "gpt55-v1-ch6topup-20260924__gpt55_ch6topup-gpt-5-5-high.jsonl": {
+      "source_run_dir": "gpt55-v1-ch6topup-20260924",
+      "source_file": "results/relbench/pilot/runs/gpt55-v1-ch6topup-20260924/gpt55_ch6topup-gpt-5-5-high.jsonl",
+      "task_manifest": "gpt55_ch6topup",
+      "rows": 36,
+      "sha256": "32983a7409eff214823db9a218725018195ed980464373cbb3cffe638d2cf4bc"
+    },
+    "sol-v1-ch6topup-20260924__sol_ch6topup-gpt-5-6-sol-high.jsonl": {
+      "source_run_dir": "sol-v1-ch6topup-20260924",
+      "source_file": "results/relbench/pilot/runs/sol-v1-ch6topup-20260924/sol_ch6topup-gpt-5-6-sol-high.jsonl",
+      "task_manifest": "sol_ch6topup",
+      "rows": 36,
+      "sha256": "7bf48f996a7796a4036a0a3766c9deadadf44d299a2f5530e863eab4ddffef4b"
+    },
+    "opus5-v1-ch6topup-20260924__opus5_ch6topup-anthropic_claude-opus-5-high.jsonl": {
+      "source_run_dir": "opus5-v1-ch6topup-20260924",
+      "source_file": "results/relbench/pilot/runs/opus5-v1-ch6topup-20260924/opus5_ch6topup-anthropic_claude-opus-5-high.jsonl",
+      "task_manifest": "opus5_ch6topup",
+      "rows": 36,
+      "sha256": "d128dbff353267c538eb590c8a1e71bfd947c43a63e427c7265f65645b23b227"
+    },
+    "opus5-v1-ch6topup-20260925__opus5_ch6topup_l400-anthropic_claude-opus-5-high.jsonl": {
+      "source_run_dir": "opus5-v1-ch6topup-20260925",
+      "source_file": "results/relbench/pilot/runs/opus5-v1-ch6topup-20260925/opus5_ch6topup_l400-anthropic_claude-opus-5-high.jsonl",
+      "task_manifest": "opus5_ch6topup_l400",
+      "rows": 18,
+      "sha256": "2dc907c51a911bed105fd78c038b72421cb9acbfd6a8119b763a0324a1c7f5f5"
+    },
+    "gpt6sol-v1-20260925__founding_3inst-gpt-6-sol-high.jsonl": {
+      "source_run_dir": "gpt6sol-v1-20260925",
+      "source_file": "results/relbench/pilot/runs/gpt6sol-v1-20260925/founding_3inst-gpt-6-sol-high.jsonl",
+      "task_manifest": "founding_3inst",
+      "rows": 144,
+      "sha256": "886bc3c66ddc0cc26c8cf7c5b8226be1f42454158d023db5206358feb5673a8d"
+    },
+    "gpt6sol-v1-20260925__gpt6sol_ch6topup-gpt-6-sol-high.jsonl": {
+      "source_run_dir": "gpt6sol-v1-20260925",
+      "source_file": "results/relbench/pilot/runs/gpt6sol-v1-20260925/gpt6sol_ch6topup-gpt-6-sol-high.jsonl",
+      "task_manifest": "gpt6sol_ch6topup",
+      "rows": 36,
+      "sha256": "3f5291dc918ace1319088524172f807aeb698956c2fb5074b5c695e53ce82771"
+    },
+    "gpt6sol-v1-20260925__gpt6sol_topup-gpt-6-sol-high.jsonl": {
+      "source_run_dir": "gpt6sol-v1-20260925",
+      "source_file": "results/relbench/pilot/runs/gpt6sol-v1-20260925/gpt6sol_topup-gpt-6-sol-high.jsonl",
+      "task_manifest": "gpt6sol_topup",
+      "rows": 72,
+      "sha256": "416cb7568143023c59af0bfd9b594ceded7b06c091d871d987616b1f732ad74e"
+    },
+    "gpt6sol-v1-20260925__newfam_3inst-gpt-6-sol-high.jsonl": {
+      "source_run_dir": "gpt6sol-v1-20260925",
+      "source_file": "results/relbench/pilot/runs/gpt6sol-v1-20260925/newfam_3inst-gpt-6-sol-high.jsonl",
+      "task_manifest": "newfam_3inst",
+      "rows": 162,
+      "sha256": "10e35a6bb68cc4e7f60a49e1850556eb8e32e1abec854952cd1204ca85a5ffac"
+    },
+    "dspro-v1-ch6topup-20260925__dspro_ch6topup-deepseek_deepseek-v4-pro-default.jsonl": {
+      "source_run_dir": "dspro-v1-ch6topup-20260925",
+      "source_file": "results/relbench/pilot/runs/dspro-v1-ch6topup-20260925/dspro_ch6topup-deepseek_deepseek-v4-pro-default.jsonl",
+      "task_manifest": "dspro_ch6topup",
+      "rows": 54,
+      "sha256": "e0cd89c8093d28170caf8a4ebb5fdf6ee53b4e590f09673d50426d2b78d70e49"
+    },
+    "dsflash41-v1-20260925__dsflash41_ch6topup-deepseek_deepseek-flash-default.jsonl": {
+      "source_run_dir": "dsflash41-v1-20260925",
+      "source_file": "results/relbench/pilot/runs/dsflash41-v1-20260925/dsflash41_ch6topup-deepseek_deepseek-flash-default.jsonl",
+      "task_manifest": "dsflash41_ch6topup",
+      "rows": 36,
+      "sha256": "6491a9711f7ec4751afc47fc3e352bd4fe8fa174e60b0e18133310e49542c06a"
+    },
+    "dsflash41-v1-20260925__dsflash41_topup-deepseek_deepseek-flash-default.jsonl": {
+      "source_run_dir": "dsflash41-v1-20260925",
+      "source_file": "results/relbench/pilot/runs/dsflash41-v1-20260925/dsflash41_topup-deepseek_deepseek-flash-default.jsonl",
+      "task_manifest": "dsflash41_topup",
+      "rows": 72,
+      "sha256": "6f72a4cf9feaeb45680c562bc93b06af42677cb508a99a2801c8cfc2b669b647"
+    },
+    "dsflash41-v1-20260925__founding_3inst-deepseek_deepseek-flash-default.jsonl": {
+      "source_run_dir": "dsflash41-v1-20260925",
+      "source_file": "results/relbench/pilot/runs/dsflash41-v1-20260925/founding_3inst-deepseek_deepseek-flash-default.jsonl",
+      "task_manifest": "founding_3inst",
+      "rows": 144,
+      "sha256": "c16bbde1ef5d5242112b00c3aca4fc090d8d504b0526b133c4c8c0687917559b"
+    },
+    "dsflash41-v1-20260925__newfam_3inst-deepseek_deepseek-flash-default.jsonl": {
+      "source_run_dir": "dsflash41-v1-20260925",
+      "source_file": "results/relbench/pilot/runs/dsflash41-v1-20260925/newfam_3inst-deepseek_deepseek-flash-default.jsonl",
+      "task_manifest": "newfam_3inst",
+      "rows": 162,
+      "sha256": "cc1d7fc5c622afcd5a2812c30b71333593dc47526cd6bbcd3093f520336b0db9"
+    },
+    "gpt6astra-v1-20260925__founding_3inst-gpt-6-astra-high.jsonl": {
+      "source_run_dir": "gpt6astra-v1-20260925",
+      "source_file": "results/relbench/pilot/runs/gpt6astra-v1-20260925/founding_3inst-gpt-6-astra-high.jsonl",
+      "task_manifest": "founding_3inst",
+      "rows": 144,
+      "sha256": "a187818e58f9534ae3437c5b715f17a6d19e5a866b482c298eeb8a6ea514e8e3"
+    },
+    "gpt6astra-v1-20260925__gpt6astra_ch6topup-gpt-6-astra-high.jsonl": {
+      "source_run_dir": "gpt6astra-v1-20260925",
+      "source_file": "results/relbench/pilot/runs/gpt6astra-v1-20260925/gpt6astra_ch6topup-gpt-6-astra-high.jsonl",
+      "task_manifest": "gpt6astra_ch6topup",
+      "rows": 36,
+      "sha256": "7991c6c843184d537821c204ff2f86f34ff50d80582f3d6c8edae22721934144"
+    },
+    "gpt6astra-v1-20260925__newfam_3inst-gpt-6-astra-high.jsonl": {
+      "source_run_dir": "gpt6astra-v1-20260925",
+      "source_file": "results/relbench/pilot/runs/gpt6astra-v1-20260925/newfam_3inst-gpt-6-astra-high.jsonl",
+      "task_manifest": "newfam_3inst",
+      "rows": 162,
+      "sha256": "36c012ba93ba727a6dd6a945d063f8e7e45ca193c75e4cbafc1a2dd573db7765"
+    },
+    "opus55-v1-20260925__founding_3inst-anthropic_claude-opus-5-5-high.jsonl": {
+      "source_run_dir": "opus55-v1-20260925",
+      "source_file": "results/relbench/pilot/runs/opus55-v1-20260925/founding_3inst-anthropic_claude-opus-5-5-high.jsonl",
+      "task_manifest": "founding_3inst",
+      "rows": 144,
+      "sha256": "6f04915c1fa55422533a5f2661ca83274ae15cd5ff1b66ded19c7127bf6b005b"
+    },
+    "opus55-v1-20260925__newfam_3inst-anthropic_claude-opus-5-5-high.jsonl": {
+      "source_run_dir": "opus55-v1-20260925",
+      "source_file": "results/relbench/pilot/runs/opus55-v1-20260925/newfam_3inst-anthropic_claude-opus-5-5-high.jsonl",
+      "task_manifest": "newfam_3inst",
+      "rows": 162,
+      "sha256": "96d42459c1c64a4f4cdb55dde1e02c299f18371fdb01cfa8dac9e5aaf3427d67"
+    },
+    "opus55-v1-20260925__opus55_ch6topup-anthropic_claude-opus-5-5-high.jsonl": {
+      "source_run_dir": "opus55-v1-20260925",
+      "source_file": "results/relbench/pilot/runs/opus55-v1-20260925/opus55_ch6topup-anthropic_claude-opus-5-5-high.jsonl",
+      "task_manifest": "opus55_ch6topup",
+      "rows": 36,
+      "sha256": "6c031b1951c21599530d7943194cdb89afa08af0ef9cb9479baafdc0036d754b"
+    },
+    "opus5-v1-shortrung-20260925__opus5_shortrung_topup-anthropic_claude-opus-5-high.jsonl": {
+      "source_run_dir": "opus5-v1-shortrung-20260925",
+      "source_file": "results/relbench/pilot/runs/opus5-v1-shortrung-20260925/opus5_shortrung_topup-anthropic_claude-opus-5-high.jsonl",
+      "task_manifest": "opus5_shortrung_topup",
+      "rows": 36,
+      "sha256": "561a0ea3c83a314a1d5f745f11bad5656dec9a82a1b964079c6fdf7d86d80cdf"
+    },
+    "gemini37flash-v1-ch6topup-20260925__geminimed_ch6topup-gemini_gemini-3-7-flash-medium.jsonl": {
+      "source_run_dir": "gemini37flash-v1-ch6topup-20260925",
+      "source_file": "results/relbench/pilot/runs/gemini37flash-v1-ch6topup-20260925/geminimed_ch6topup-gemini_gemini-3-7-flash-medium.jsonl",
+      "task_manifest": "geminimed_ch6topup",
+      "rows": 18,
+      "sha256": "d9e7993eb1739c37c1c8a9d20147faa9295b962e12ee8fb0394a46974ed9620a"
+    }
+  },
+  "tasks_files": {
+    "dsflash_content_fix": {
+      "file": "tasks/dsflash_content_fix.jsonl",
+      "source_file": "results/relbench/pilot/tasks/v1-bnew/dsflash_content_fix.jsonl",
+      "rows": 18,
+      "sha256": "db0adb25cbefc9b0b1c5d995f702aa1f4f3f3547919887c1b4fcb893c7134f04"
+    },
+    "founding_3inst": {
+      "file": "tasks/founding_3inst.jsonl",
+      "source_file": "results/relbench/pilot/tasks/v1-bnew/founding_3inst.jsonl",
+      "rows": 24,
+      "sha256": "86ff3e1afb9b115fe3f621631c70da6af7b70f80ce2a7aca5c180ca1e7b84734"
+    },
+    "founding_6inst": {
+      "file": "tasks/founding_6inst.jsonl",
+      "source_file": "results/relbench/pilot/tasks/v1-bnew/founding_6inst.jsonl",
+      "rows": 48,
+      "sha256": "e96cac62a9bb102fcc3ae2c59b25ce8382c3b97f6dbc5cf9597562745e7a1a2c"
+    },
+    "gateway_3inst": {
+      "file": "tasks/gateway_3inst.jsonl",
+      "source_file": "results/relbench/pilot/tasks/v1-bnew/gateway_3inst.jsonl",
+      "rows": 12,
+      "sha256": "b100b40961e4eaef7e38bbc425955d898f3a104b92fbe639a08bbd903e9f2760"
+    },
+    "newfam_3inst": {
+      "file": "tasks/newfam_3inst.jsonl",
+      "source_file": "results/relbench/pilot/tasks/v1-bnew/newfam_3inst.jsonl",
+      "rows": 27,
+      "sha256": "35cfd8a48cc1132a3d1f0dac7f4490e83dd19d22cd1991351e9e31d61a2c1d1a"
+    },
+    "payroll_3inst": {
+      "file": "tasks/payroll_3inst.jsonl",
+      "source_file": "results/relbench/pilot/tasks/v1-bnew/payroll_3inst.jsonl",
+      "rows": 15,
+      "sha256": "3e14102824078a31e9bce0d1123c95d96fb2b2b4efa9a09932654d9c397f809d"
+    },
+    "dspro_topup": {
+      "file": "tasks/topups/dspro_topup.jsonl",
+      "source_file": "results/relbench/pilot/tasks/v1-bnew/topups/dspro_topup.jsonl",
+      "rows": 12,
+      "sha256": "c3407ef4979e780546244206a2784c9b0b4e9a9bd6a60765e4b3b48b33770e65"
+    },
+    "geminimed_topup": {
+      "file": "tasks/topups/geminimed_topup.jsonl",
+      "source_file": "results/relbench/pilot/tasks/v1-bnew/topups/geminimed_topup.jsonl",
+      "rows": 12,
+      "sha256": "ec18d1a6e3226ca8551175c40357652f9ec9e4c38d74e0c4e0e4ba0bdc904d18"
+    },
+    "gpt55_topup": {
+      "file": "tasks/topups/gpt55_topup.jsonl",
+      "source_file": "results/relbench/pilot/tasks/v1-bnew/topups/gpt55_topup.jsonl",
+      "rows": 12,
+      "sha256": "2f37c9cbce429a3cef88e31149424baa21f701a1fa00cbe01497f3fbd94fca62"
+    },
+    "sol_topup": {
+      "file": "tasks/topups/sol_topup.jsonl",
+      "source_file": "results/relbench/pilot/tasks/v1-bnew/topups/sol_topup.jsonl",
+      "rows": 12,
+      "sha256": "c3407ef4979e780546244206a2784c9b0b4e9a9bd6a60765e4b3b48b33770e65"
+    },
+    "terra_topup": {
+      "file": "tasks/topups/terra_topup.jsonl",
+      "source_file": "results/relbench/pilot/tasks/v1-bnew/topups/terra_topup.jsonl",
+      "rows": 6,
+      "sha256": "660526fe66f4122a563a72a5f95be4db158d153265b15f6048facacc4301effe"
+    },
+    "gpt55_ch6topup": {
+      "file": "tasks/gpt55_ch6topup.jsonl",
+      "source_file": "results/relbench/pilot/tasks/v1-bnew/topups/gpt55_ch6topup.jsonl",
+      "rows": 6,
+      "sha256": "dcb9b0f86b23912b1fe4f6cb878ecabc739a09e58b670d3b5e4fdcb11b0baf90"
+    },
+    "gpt6luna_topup": {
+      "file": "tasks/gpt6luna_topup.jsonl",
+      "source_file": "results/relbench/pilot/tasks/v1-bnew/topups/gpt6luna_topup.jsonl",
+      "rows": 6,
+      "sha256": "28d4d073b861df9394df0aff3f55dcc359d0ccb83c3dffca0ec3e5127d27a587"
+    },
+    "opus5_ch6topup": {
+      "file": "tasks/opus5_ch6topup.jsonl",
+      "source_file": "results/relbench/pilot/tasks/v1-bnew/topups/opus5_ch6topup.jsonl",
+      "rows": 6,
+      "sha256": "65e9a07a24102da65673cdc1f0f7196ecd020040eb9b5c0795c2a8a8d5b7baeb"
+    },
+    "sol_ch6topup": {
+      "file": "tasks/sol_ch6topup.jsonl",
+      "source_file": "results/relbench/pilot/tasks/v1-bnew/topups/sol_ch6topup.jsonl",
+      "rows": 6,
+      "sha256": "1eaa8f96698bf42891f9fa269ca9b3858d17077c3f5a7b58662b32c5e68264d0"
+    },
+    "gpt6sol_ch6topup": {
+      "file": "tasks/gpt6sol_ch6topup.jsonl",
+      "source_file": "results/relbench/pilot/tasks/v1-bnew/topups/gpt6sol_ch6topup.jsonl",
+      "rows": 6,
+      "sha256": "1eaa8f96698bf42891f9fa269ca9b3858d17077c3f5a7b58662b32c5e68264d0"
+    },
+    "gpt6sol_topup": {
+      "file": "tasks/gpt6sol_topup.jsonl",
+      "source_file": "results/relbench/pilot/tasks/v1-bnew/topups/gpt6sol_topup.jsonl",
+      "rows": 12,
+      "sha256": "bf21dd7cdd7a18c73b1847bfbbc69a806dc6bfc1069107610abd08683fc24c83"
+    },
+    "opus5_ch6topup_l400": {
+      "file": "tasks/opus5_ch6topup_l400.jsonl",
+      "source_file": "results/relbench/pilot/tasks/v1-bnew/topups/opus5_ch6topup_l400.jsonl",
+      "rows": 3,
+      "sha256": "bcc83cb5da9548b11a6e6f2ddc48111fb9322a5c4f4711daf60387faf411fa32"
+    },
+    "dsflash41_ch6topup": {
+      "file": "tasks/dsflash41_ch6topup.jsonl",
+      "source_file": "results/relbench/pilot/tasks/v1-bnew/topups/dsflash41_ch6topup.jsonl",
+      "rows": 6,
+      "sha256": "dcb9b0f86b23912b1fe4f6cb878ecabc739a09e58b670d3b5e4fdcb11b0baf90"
+    },
+    "dsflash41_topup": {
+      "file": "tasks/dsflash41_topup.jsonl",
+      "source_file": "results/relbench/pilot/tasks/v1-bnew/topups/dsflash41_topup.jsonl",
+      "rows": 12,
+      "sha256": "d7c62ea5e4595d27f01ec311348fed30a778eb0d7638a93a6af178226fafa226"
+    },
+    "dspro_ch6topup": {
+      "file": "tasks/dspro_ch6topup.jsonl",
+      "source_file": "results/relbench/pilot/tasks/v1-bnew/topups/dspro_ch6topup.jsonl",
+      "rows": 9,
+      "sha256": "99f861b59e0bd33ee9d69aae67346813638ff8eba7eecbd22d64688a2c71cde1"
+    },
+    "gpt6astra_ch6topup": {
+      "file": "tasks/gpt6astra_ch6topup.jsonl",
+      "source_file": "results/relbench/pilot/tasks/v1-bnew/topups/gpt6astra_ch6topup.jsonl",
+      "rows": 6,
+      "sha256": "addf6d559ac51d36e1de8af471f5d772662ddf1de4368942abcedd8718118d2d"
+    },
+    "opus55_ch6topup": {
+      "file": "tasks/opus55_ch6topup.jsonl",
+      "source_file": "results/relbench/pilot/tasks/v1-bnew/topups/opus55_ch6topup.jsonl",
+      "rows": 6,
+      "sha256": "addf6d559ac51d36e1de8af471f5d772662ddf1de4368942abcedd8718118d2d"
+    },
+    "opus5_shortrung_topup": {
+      "file": "tasks/opus5_shortrung_topup.jsonl",
+      "source_file": "results/relbench/pilot/tasks/v1-bnew/topups/opus5_shortrung_topup.jsonl",
+      "rows": 6,
+      "sha256": "39d70228d5619f8f1c0af39a4b256bb1b041afba34cd86d0c8c83b412f087ae1"
+    },
+    "geminimed_ch6topup": {
+      "file": "tasks/geminimed_ch6topup.jsonl",
+      "source_file": "results/relbench/pilot/tasks/v1-bnew/topups/geminimed_ch6topup.jsonl",
+      "rows": 3,
+      "sha256": "7fd4607c20076da81d88dd890c0f94876b8bf0f4872f4aff7e39ee6259dfda61"
+    }
+  },
+  "content_fix_manifest": "dsflash_content_fix",
+  "content_fix_matches": "founding_3inst"
+}

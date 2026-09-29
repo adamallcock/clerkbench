@@ -1,0 +1,15 @@
+model,effort,config,attempts_scored,attempts_with_any_slip,open_two_bracket,end_two_bracket,open_one_bracket,end_one_bracket,end_glued,open_spaced,end_spaced,open_not_line_start,other,slip_scored_correct_via_normalization,slip_failed_content_byte_exact,slip_failed_content_wrong_or_partial
+gpt-5.5,high,gpt-5.5/high,414,4,0,0,0,0,4,0,0,0,0,0,0,4
+gpt-5.6-sol,high,gpt-5.6-sol/high,414,0,0,0,0,0,0,0,0,0,0,0,0,0
+gpt-5.6-terra,high,gpt-5.6-terra/high,342,0,0,0,0,0,0,0,0,0,0,0,0,0
+gpt-5.6-luna,high,gpt-5.6-luna/high,306,1,0,0,0,0,0,0,1,0,0,0,0,1
+anthropic/claude-opus-5,high,anthropic/opus-5/high,396,0,0,0,0,0,0,0,0,0,0,0,0,0
+gemini/gemini-3.7-flash,high,gemini/gemini-3.7-flash/high,250,1,0,0,1,0,0,0,0,0,0,0,0,1
+gemini/gemini-3.7-flash,medium,gemini/gemini-3.7-flash/medium,396,0,0,0,0,0,0,0,0,0,0,0,0,0
+deepseek/deepseek-v4-pro,default,deepseek/deepseek-v4-pro/default,432,1,1,0,0,0,1,0,0,1,0,0,0,1
+deepseek/deepseek-v4-flash,default,deepseek/deepseek-v4-flash/default,450,437,435,0,2,0,0,0,0,0,0,268,0,169
+gpt-6-luna,high,gpt-6-luna/high,342,18,0,18,0,0,0,0,0,0,0,0,0,18
+gpt-6-sol,high,gpt-6-sol/high,414,0,0,0,0,0,0,0,0,0,0,0,0,0
+deepseek/deepseek-flash,default,deepseek/deepseek-flash/default,414,0,0,0,0,0,0,0,0,0,0,0,0,0
+gpt-6-astra,high,gpt-6-astra/high,342,0,0,0,0,0,0,0,0,0,0,0,0,0
+anthropic/claude-opus-5-5,high,anthropic/opus-5-5/high,342,0,0,0,0,0,0,0,0,0,0,0,0,0

@@ -1,0 +1,15 @@
+model,input_usd_per_mtok,output_usd_per_mtok,verified,note
+anthropic/claude-opus-5,5.0,25.0,2026-09-07,"v1 roster: 5/25 in/out (claude.com/pricing, re-verified 2026-09-07); cache read 0.50, 5m cache write 6.25, 1h cache write 10. The 2026-08-15 entry (5/10) had misread the 1h-cache-write column as the output price (red-team C5); the v1 campaign was priced at that wrong rate and rebuilt 2026-09-07. Batch -50% is collection-only; report list."
+anthropic/claude-opus-5-5,4.0,20.0,2026-09-25,"v1 post-freeze roster addition: 4/20 in/out (claude.com/pricing, verified 2026-09-25); cache read 0.20, 5m cache write 5. Batch -50% is collection-only; report list."
+deepseek/deepseek-flash,0.3,1.2,2026-09-25,"DeepSeek-V4.1-Flash under the unversioned alias deepseek-flash (released 2026-09-10); list = peak, cache-miss, from api-docs.deepseek.com/quick_start/pricing. Off-peak -50% collection-only. The deepseek-v4-flash name now routes here; V4 Flash itself is retired."
+deepseek/deepseek-v4-flash,0.44,1.32,2026-08-17,"v1 verified list (peak, cache-miss): was assumed 0.35/0.70; actual ~3x in / ~4.5x out over the 0.14/0.28 era. Off-peak -50% collection-only. Checkpoint 0731 unchanged; pre-v1 rows off the v1 board on task-set grounds."
+deepseek/deepseek-v4-pro,1.32,3.96,2026-08-17,"v1 verified list (peak, cache-miss): was assumed 1.0875/2.175; actual ~3x in / ~4.5x out over the 0.435/0.87 era. Off-peak -50% collection-only. Pre-0813 data PURGED (checkpoint)."
+gemini/gemini-3.7-flash,0.75,3.75,2026-08-15,"v1 roster (confirmed): flex spend 0.375/1.875, cached-in 0.0375; list = 2x flex. Flex is collection-only; report list."
+gpt-5.4-nano,0.2,1.25,2026-07-11,
+gpt-5.5,5.0,30.0,2026-07-11,
+gpt-5.6-luna,0.2,1.2,2026-08-15,v1: -5x price change (was 1.0/6.0 on 2026-07-11); direct flex -50% collection-only
+gpt-5.6-sol,5.0,30.0,2026-07-11,
+gpt-5.6-terra,2.0,12.0,2026-09-07,"v1: -20% on 2026-07-30 (was 2.5/15.0 on 2026-07-11); the 2026-08-15 entry (0.5/3.0) had applied Luna's -80% cut to Terra (red-team M48), corrected and re-verified against developers.openai.com/api/docs/pricing 2026-09-07; direct flex -50% collection-only"
+gpt-6-astra,10.0,50.0,2026-09-25,"v1 post-freeze roster addition (full collection 2026-09-25/26 UTC, after an L=400 probe); short-context Standard list (long context 20/75 never applies: the largest v1 prompt is 23,730 tokens); direct flex -50% collection-only"
+gpt-6-luna,0.1,0.5,2026-09-24,v1 post-freeze roster addition; direct flex -50% collection-only
+gpt-6-sol,2.0,10.0,2026-09-24,"v1 post-freeze roster addition (full collection 2026-09-25, after an L=400 cost/cap probe); direct flex -50% collection-only"
