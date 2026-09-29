@@ -476,7 +476,9 @@ Version 2.0. See `LICENSE` and `LICENSE-DATA-DOCS.md` for full terms.
 
 ## Citing
 
-Please cite the paper and this archive; `CITATION.cff` carries both. This
+Please cite the paper
+([doi:10.5281/zenodo.23048151](https://doi.org/10.5281/zenodo.23048151)) and this archive;
+`CITATION.cff` carries both. This
 version is archived on Zenodo as
 [doi:10.5281/zenodo.23048121](https://doi.org/10.5281/zenodo.23048121); the concept DOI
 [10.5281/zenodo.23048120](https://doi.org/10.5281/zenodo.23048120) always resolves to the latest version.
