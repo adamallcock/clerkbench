@@ -3,6 +3,14 @@ message: "If you use this release, please cite the paper and this archive."
 title: "ClerkBench v1: data, scorer and evidence capsule"
 type: dataset
 version: 1.0.0
+doi: 10.5281/zenodo.23048121
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.23048121
+    description: "This version (v1.0.0), archived on Zenodo"
+  - type: doi
+    value: 10.5281/zenodo.23048120
+    description: "Concept DOI: always resolves to the latest version"
 date-released: 2026-09-29
 authors:
   - family-names: Allcock
@@ -12,6 +20,7 @@ license:
   - CC-BY-4.0
   - Apache-2.0
 repository-code: "https://github.com/adamallcock/clerkbench"
+url: "https://doi.org/10.5281/zenodo.23048121"
 abstract: >-
   Data and code release for ClerkBench, a benchmark that measures how long a
   chain of simple, fully specified clerical computation a language model can
